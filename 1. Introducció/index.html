@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducció</title>
+</head>
+
+<body>
+    <h1>Introducció</h1>
+    <p>El Typescript és Javascript amb llenguatge extra, hem de declarar variables amb el seu tipus, això ajuda a
+        detectar errors durant el desenvolupament. No dóna avantatges de performance</p>
+    <h2>Maneres de detectar errors</h2>
+    <p>El Typescript té diverses maneres de detectar errors durant l'escriptura.</p>
+    <p>La primera manera seria creant plantilles d'objectes, així quan agafem un objecte al qual apliqui la plantilla,
+        el Typescript ens avisarà de quins elements componen l'objecte i de quin tipus són. Les plantilles s'escriuen
+        així: interface{propietat: tipus,...}</p>
+    <p>Les plantilles es creen amb la paraula interface, mira l'exemple:</p>
+    <p>interface User{
+        name: string;
+        age: number;
+        alive: boolean;
+        }</p>
+    <p>Les interfaces poden ignorar propietats que no ens interessen quan per exemple, fem una petició axios per
+        aobtenir l'objecte</p>
+    <p>Per a assignar la plantilla a l'objecte hem de posar "as plantilla" darrere de l'objecte en el moment que es
+        declara, mira l'exemple:</p>
+    <p>const user1 = {name: "Roger", age:25, alive:true} as User</p>
+    <p>Si intentem definir una nova propietat per a un objecte creat amb una plantilla, donarà error</p>
+    <p>Un altre mètode per a que el TS ens ajudi a trobar errors, és definir el tipus dels paràmetres en les funcions.
+        Es faria posanr dos punts i el tipus esperat a costat de cada paràmetre, mira l'exemple:</p>
+    <p>const funcio1 = (name: string, white: boolean)</p>
+</body>
+
+</html>
