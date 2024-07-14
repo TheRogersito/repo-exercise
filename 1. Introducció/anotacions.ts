@@ -52,3 +52,13 @@ const hawaiana : [string, number, boolean] = ["Pinya", 3, true]
 type Pizza = [string, number, boolean]
 const barbacoa: Pizza=["Carn", 4, true]
 // Els tuples no s'utilitzen gaire, però oi que és guay saber coses noves?
+
+// També existeixen els generics, són una espècie de paràmetre per a la creació d'una classe i aquest paràmetre és un tipat, mira l'exemple
+class ExempleGeneric<ElGeneric> {
+    data:ElGeneric
+}
+const exempleGenericNumero = new ExempleGeneric<number>()
+exempleGenericNumero.data=2
+const exempleGenericString = new ExempleGeneric<string>()
+exempleGenericString.data="asasa"
+// És costum que el genèric sigui anomenat T d'aquesta manera <T>
